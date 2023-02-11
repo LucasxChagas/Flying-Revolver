@@ -26,7 +26,6 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        UpdateCrosshair();
         UpdatePlayerMovement();
         UpdatePlayerRotation();
         
@@ -35,6 +34,7 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(movementInputs.x, movementInputs.y) * movementSpeed;
+        UpdateCrosshair();
     }
 
     void UpdatePlayerMovement()
