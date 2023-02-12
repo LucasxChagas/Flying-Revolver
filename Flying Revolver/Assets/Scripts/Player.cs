@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
 
     void UpdateCrosshair()
     {
-        crossHair.transform.position = new Vector3(mousePosition.x, mousePosition.y, 1);
+        crossHair.transform.position = new Vector3(mousePosition.x, mousePosition.y, 0);
     }
     void UpdatePlayerRotation()
     {
@@ -57,11 +57,12 @@ public class Player : MonoBehaviour
 
         if (this.transform.position.x < mousePosition.x)
         {
-            this.transform.localScale = new Vector3(1, 1, 1);
+            this.GetComponent<SpriteRenderer>().flipX = false;
         }
         else
         {
-            this.transform.localScale = new Vector3(-1, 1, 1);
+            this.GetComponent<SpriteRenderer>().flipX = true;
+
         }
     }
 }

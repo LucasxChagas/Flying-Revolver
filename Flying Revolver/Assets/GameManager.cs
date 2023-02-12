@@ -2,12 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CrossHair : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] GameObject canvas;
+
+    private void Awake()
+    {
+        canvas.SetActive(false);
+    }
+
     void Start()
     {
-        
+        canvas.SetActive(true);
     }
 
     // Update is called once per frame

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    [Header("Settings")] 
+    [Header("Settings")]
+    [SerializeField] Camera cam_;
     [SerializeField] float cameraLimit;
 
     Transform player;
@@ -17,7 +18,7 @@ public class CameraFollow : MonoBehaviour
 
     void Update()
     {
-        targetPosition = (player.position + Camera.main.ScreenToWorldPoint(Input.mousePosition)) / 2f;
+        targetPosition = (player.position + cam_.ScreenToWorldPoint(Input.mousePosition)) / 2f;
 
         targetPosition.x = Mathf.Clamp(targetPosition.x, -cameraLimit + player.position.x, cameraLimit + player.position.x);
         targetPosition.y = Mathf.Clamp(targetPosition.y, -cameraLimit + player.position.y, cameraLimit + player.position.y);
