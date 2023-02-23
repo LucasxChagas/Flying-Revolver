@@ -26,14 +26,25 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        UpdatePlayerMovement();
-        UpdatePlayerRotation();
-        
+        if(!GameManager.Instance.endGame)
+        {
+            UpdatePlayerMovement();
+            UpdatePlayerRotation();
+        }
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(movementInputs.x, movementInputs.y) * movementSpeed;
+        if (!GameManager.Instance.endGame)
+        {
+            rb.velocity = new Vector2(movementInputs.x, movementInputs.y) * movementSpeed;
+        }
+        else
+        {
+            anim.SetBool("isWalking", false);
+            rb.velocity = Vector3.zero;
+        }
+
         UpdateCrosshair();
     }
 
@@ -46,7 +57,7 @@ public class Player : MonoBehaviour
 
     void UpdateCrosshair()
     {
-        crossHair.transform.position = new Vector3(mousePosition.x, mousePosition.y, 0);
+        crossHair.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0);
     }
     void UpdatePlayerRotation()
     {

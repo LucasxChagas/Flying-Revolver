@@ -18,11 +18,14 @@ public class CameraFollow : MonoBehaviour
 
     void Update()
     {
-        targetPosition = (player.position + cam_.ScreenToWorldPoint(Input.mousePosition)) / 2f;
+        if (!GameManager.Instance.endGame)
+        {
+            targetPosition = (player.position + cam_.ScreenToWorldPoint(Input.mousePosition)) / 2f;
 
-        targetPosition.x = Mathf.Clamp(targetPosition.x, -cameraLimit + player.position.x, cameraLimit + player.position.x);
-        targetPosition.y = Mathf.Clamp(targetPosition.y, -cameraLimit + player.position.y, cameraLimit + player.position.y);
+            targetPosition.x = Mathf.Clamp(targetPosition.x, -cameraLimit + player.position.x, cameraLimit + player.position.x);
+            targetPosition.y = Mathf.Clamp(targetPosition.y, -cameraLimit + player.position.y, cameraLimit + player.position.y);
 
-        this.transform.position = targetPosition;
+            this.transform.position = targetPosition;
+        }
     }
 }

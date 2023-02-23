@@ -12,16 +12,18 @@ public class Revolver : MonoBehaviour
     
     void Update()
     {
-        if(Input.GetMouseButton(0) && CanShot())
+        if (!GameManager.Instance.endGame)
         {
-            fireTimer = Time.time + fireRate;
+            if (Input.GetMouseButton(0) && CanShot())
+            {
+                fireTimer = Time.time + fireRate;
 
-            Instantiate(bullet, barrel.position, barrel.rotation);
-            GetComponent<Animator>().SetTrigger("Fire");
-            CameraShake.Instance.ShakeCamera(5f, .1f);
+                Instantiate(bullet, barrel.position, barrel.rotation);
+                GetComponent<Animator>().SetTrigger("Fire");
+                CameraShake.Instance.ShakeCamera(5f, .1f);
+            }
         }
     }
-
     bool CanShot()
     {
         return Time.time > fireTimer;

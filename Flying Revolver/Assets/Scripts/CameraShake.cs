@@ -31,18 +31,21 @@ public class CameraShake : MonoBehaviour
 
     private void Update()
     {
-        if(shakeTimer > 0)
+        if (!GameManager.Instance.endGame)
         {
-            shakeTimer -= Time.deltaTime;
-
-            if(shakeTimer <= 0f)
+            if (shakeTimer > 0)
             {
-                CinemachineBasicMultiChannelPerlin cinemachineBasicMultiChannelPerlin =
-                    cinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+                shakeTimer -= Time.deltaTime;
 
-                cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = 0f;
+                if (shakeTimer <= 0f)
+                {
+                    CinemachineBasicMultiChannelPerlin cinemachineBasicMultiChannelPerlin =
+                        cinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+
+                    cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = 0f;
+                }
+
             }
-
         }
     }
 }

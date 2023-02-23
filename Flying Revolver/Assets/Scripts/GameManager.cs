@@ -4,11 +4,25 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance;
+
+    [Header("Components")]
     [SerializeField] GameObject canvas;
+
+    [HideInInspector] public bool endGame;
 
     private void Awake()
     {
         canvas.SetActive(false);
+        endGame = false;
+
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        Instance = this;
+
+
     }
 
     void Start()
@@ -16,9 +30,9 @@ public class GameManager : MonoBehaviour
         canvas.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CallEndGame()
     {
-        
+        endGame = true;
+        Debug.Log("Cabou o jogo");
     }
 }

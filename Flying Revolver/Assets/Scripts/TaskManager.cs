@@ -10,6 +10,8 @@ public class TaskManager : MonoBehaviour
     [Header("General Settings")]
     [SerializeField] Animator anim;
     [SerializeField] Color32 sucessTaskColor;
+    [SerializeField] GameObject sheriffDoor;
+    [SerializeField] GameObject endGameTrigger;
 
     [Header("Money Bag Task")]
     [SerializeField] GameObject moneyBagTask;
@@ -35,6 +37,11 @@ public class TaskManager : MonoBehaviour
             Destroy(this.gameObject);
         }
         Instance = this;
+    }
+    private void Start()
+    {
+        sheriffDoor.SetActive(true);
+        endGameTrigger.SetActive(false);
     }
 
     public void UpdateTask(int taskNumber)
@@ -79,20 +86,21 @@ public class TaskManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.J))
+        if (!GameManager.Instance.endGame)
         {
-            UpdateTask(0);
-        }
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            UpdateTask(1);
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+                UpdateTask(1);
+            }
         }
     }
 
     IEnumerator CallLastTask()
     {
-        Debug.Log("Cu");
         yield return new WaitForSeconds(.5f);
+        sheriffDoor.SetActive(false);
+        endGameTrigger.SetActive(true);
         anim.SetTrigger("LastTask");
+
     }
 }

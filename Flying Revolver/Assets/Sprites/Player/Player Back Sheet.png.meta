@@ -995,7 +995,6 @@ TextureImporter:
       Idle_4: -1498268824
       Player Back Sheet_11: 1404996808
       Player Back Sheet_13: 1172048623
-      Player Back Sheet_10: -1244545058
       Player Back Sheet_19: -1499211695
       Player Back Sheet_14: 1113826034
       Player Back Sheet_23: -632745106
@@ -1003,6 +1002,7 @@ TextureImporter:
       Player Back Sheet_16: 671754183
       Idle_1: 1207795175
       Player Back Sheet_20: 2125438847
+      Player Back Sheet_17: -2121721072
       Player Back Sheet_9: -483053478
       Player Back Sheet_40: -119499249
       Player Back Sheet_12: 800347596
@@ -1023,11 +1023,11 @@ TextureImporter:
       Idle_2: 2014628895
       Player Back Sheet_30: 632171138
       Player Back Sheet_32: 1655083177
-      Player Back Sheet_27: -610559752
+      Player Back Sheet_10: -1244545058
       Player Back Sheet_21: -171191593
+      Player Back Sheet_27: -610559752
       Player Back Sheet_22: -803270515
       Player Back Sheet_33: 1776175991
-      Player Back Sheet_17: -2121721072
       Player Back Sheet_36: 2014261346
   spritePackingTag: 
   pSDRemoveMatte: 0
