@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RevolverAim : MonoBehaviour
+public class EnemyAim : MonoBehaviour
 {
     [SerializeField] float offset;
     [SerializeField] Transform owner;
@@ -16,11 +16,11 @@ public class RevolverAim : MonoBehaviour
     {
         if (!GameManager.Instance.endGame)
         {
-            direction = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+            direction = owner.GetComponent<Enemy>().currentTarget.position - (transform.position);
             angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             transform.eulerAngles = new Vector3(0, 0, angle);
 
-            playerToMouseDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition) - owner.position;
+            playerToMouseDirection = owner.GetComponent<Enemy>().currentTarget.position - owner.position;
             playerToMouseDirection.z = 0;
             transform.position = owner.position + (offset * playerToMouseDirection.normalized);
 

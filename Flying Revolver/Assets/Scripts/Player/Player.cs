@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     Vector3 mousePosition;
     Vector2 movementInputs;
 
+    public static bool isDead;
 
     void Start()
     {

@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -115,7 +115,532 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Cactus Side Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 121
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df093023846ef6b4d86dad79bf4d6640
+      internalID: 1129657451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cactus Side Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 121
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e2dba7054f17754fa96fdd2015bcd37
+      internalID: 1934346467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cactus Side Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 121
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 782f65d8be8b824479c9d20f5729e0aa
+      internalID: 518290638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cactus Side Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 121
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c51e55ad0987a55429f833d46f583c78
+      internalID: -1524039184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cactus Side Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 81
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28506bd4e66aa7741a648fa49de353eb
+      internalID: 1488936792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cactus Side Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 81
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79217d6da1e2d1a49b1622d5de26cb74
+      internalID: -20891751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cactus Side Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 81
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22dbd2874ce259149833cee1b08e8245
+      internalID: 558301096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cactus Side Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 81
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2bb7b5e486a5794fa3aac9b848fa5bf
+      internalID: 1497823820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cactus Side Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 81
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8276439d6f3566479bc2ed498e3429b
+      internalID: 344926507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cactus Side Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 81
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9e70d67bfb06140bb6388b92fe1f3d
+      internalID: 1342749578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cactus Side Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 81
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b082d0107f7c07540869a868e2ced404
+      internalID: -805316330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cactus Side Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 81
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff5c9f4b659159d4796175e726d4cef7
+      internalID: 653321244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cactus Side Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 81
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24bb0f6373a4871488340e5314ca2f6d
+      internalID: 673343308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cactus Side Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 41
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 823395bc0d0df4648b4dfee94ef5acc4
+      internalID: 1620106660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cactus Side Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 41
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 047660521634c4d479c56dda131b93c4
+      internalID: -2037505725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cactus Side Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 41
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d809126d05cf70b42bf33e8a27cece9a
+      internalID: -197340839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cactus Side Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 41
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac470f69ff8256b42ba131d508215cbf
+      internalID: 871626671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cactus Side Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 41
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e99a5007e361d6d4da594246af25f70b
+      internalID: -986485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cactus Side Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 41
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9bf656869655d14581ed3ef36c1fe65
+      internalID: 320661901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cactus Side Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 41
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c356aebbda7f9ff49822a57a0b34d80b
+      internalID: -773926812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cactus Side Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 41
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb3b3f20eaa6c134691139b3dfdd650d
+      internalID: 699558427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cactus Side Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 41
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a715959356603cc47844b6e3bc1687e0
+      internalID: 225690807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cactus Side Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 41
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebbf1c96c10727d408a74667c2ef7a8d
+      internalID: 393853030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cactus Side Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 41
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05cf8ae67327409479d3f55bc9fa3369
+      internalID: 686771040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cactus Side Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 5
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3381400ff9877fa49a4c889168b90d63
+      internalID: -210048437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +651,32 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cactus Side Sheet_23: 686771040
+      Cactus Side Sheet_22: 393853030
+      Cactus Side Sheet_4: 1488936792
+      Cactus Side Sheet_24: -210048437
+      Cactus Side Sheet_7: 1497823820
+      Cactus Side Sheet_6: 558301096
+      Cactus Side Sheet_13: 1620106660
+      Cactus Side Sheet_14: -2037505725
+      Cactus Side Sheet_21: 225690807
+      Cactus Side Sheet_0: 1129657451
+      Cactus Side Sheet_3: -1524039184
+      Cactus Side Sheet_12: 673343308
+      Cactus Side Sheet_19: -773926812
+      Cactus Side Sheet_10: -805316330
+      Cactus Side Sheet_17: -986485
+      Cactus Side Sheet_18: 320661901
+      Cactus Side Sheet_16: 871626671
+      Cactus Side Sheet_2: 518290638
+      Cactus Side Sheet_11: 653321244
+      Cactus Side Sheet_8: 344926507
+      Cactus Side Sheet_5: -20891751
+      Cactus Side Sheet_1: 1934346467
+      Cactus Side Sheet_9: 1342749578
+      Cactus Side Sheet_15: -197340839
+      Cactus Side Sheet_20: 699558427
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
