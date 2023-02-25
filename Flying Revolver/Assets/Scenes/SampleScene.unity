@@ -54784,7 +54784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6c2499b742e69040bcb5ff4623ee36f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: 1.5
+  offset: 1.2
   owner: {fileID: 1328118464}
 --- !u!1 &2064926577
 GameObject:
