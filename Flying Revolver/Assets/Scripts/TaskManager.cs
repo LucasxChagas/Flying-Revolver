@@ -84,17 +84,6 @@ public class TaskManager : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (!GameManager.Instance.endGame)
-        {
-            if (Input.GetKeyDown(KeyCode.K))
-            {
-                UpdateTask(1);
-            }
-        }
-    }
-
     IEnumerator CallLastTask()
     {
         yield return new WaitForSeconds(.5f);

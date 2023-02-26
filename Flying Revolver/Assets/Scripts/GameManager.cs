@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,11 +12,14 @@ public class GameManager : MonoBehaviour
 
     [HideInInspector] public bool endGame;
 
-    [Header("HitPause Settings")]
-    [SerializeField] [Range(0f, 2f)] float pauseDuration = 1f;
-    float pendingPauseDuration = 0f;
-    bool isPaused = false;
+    [Header("Others")]
+    public Animator EndGameScreen;
+    public Animator DeathScreen;
+    public GameObject PauseScreen;
 
+    bool alreadyClickedButton = false;
+
+    bool gameIsPaused = false;
 
     private void Awake()
     {
@@ -27,46 +31,65 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
         Instance = this;
-
     }
 
     void Start()
     {
         canvas.SetActive(true);
+        canvas.GetComponent<Animator>().Play("Canvas - Fade Out");
         Cursor.visible = false;
     }
 
-    void Update()
+    public void SocialLinks()
     {
-        if (pendingPauseDuration > 0 && !isPaused)
+        Application.OpenURL("https://lucasxchagas.carrd.co");
+    }
+
+    public void PlayAgain()
+    {
+        if (!alreadyClickedButton)
         {
-            StartCoroutine(StartsHitPause());
+            alreadyClickedButton = true;
+            StartCoroutine(ReloadScene(.9f));
+            canvas.GetComponent<Animator>().Play("Canvas - Fade In");
+        }
+    }
+
+
+    public void PauseGame()
+    {
+        Debug.Log("Pause");
+        gameIsPaused = !gameIsPaused;
+
+        if(gameIsPaused)
+        {
+            PauseScreen.SetActive(false);
+            Time.timeScale = 1f;
+        }
+        else
+        {
+            PauseScreen.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 
     public void CallEndGame()
     {
         endGame = true;
-        Debug.Log("Cabou o jogo");
+        EndGameScreen.gameObject.SetActive(true);
+        EndGameScreen.Play("DeathScreenAnimation");
     }
 
-    public void HitPause()
+    public void CallDeathScreen()
     {
-        pendingPauseDuration = pauseDuration;
-
+        DeathScreen.gameObject.SetActive(true);
+        DeathScreen.Play("DeathScreenAnimation");
     }
 
-    IEnumerator StartsHitPause()
+    IEnumerator ReloadScene(float timer)
     {
-        isPaused = true;
-        float originalTimeScale = Time.timeScale;
-        Player.Instance.DamageFeedback(true);
-        Time.timeScale = 0;
-        yield return new WaitForSecondsRealtime(pauseDuration);
-        CameraShake.Instance.ShakeCamera(8f, .3f);
-        Player.Instance.DamageFeedback(false);
-        Time.timeScale = originalTimeScale;
-        pendingPauseDuration = 0;
-        isPaused = false;
+        yield return new WaitForSeconds(timer);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

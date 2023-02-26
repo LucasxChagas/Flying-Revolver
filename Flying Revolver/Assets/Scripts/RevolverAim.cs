@@ -14,7 +14,7 @@ public class RevolverAim : MonoBehaviour
 
     void Update()
     {
-        if (!GameManager.Instance.endGame)
+        if (!GameManager.Instance.endGame && !Player.isDead)
         {
             direction = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
             angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;

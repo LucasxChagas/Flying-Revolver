@@ -18,7 +18,7 @@ public class CameraFollow : MonoBehaviour
 
     void Update()
     {
-        if (!GameManager.Instance.endGame)
+        if (!GameManager.Instance.endGame && !Player.isDead)
         {
             targetPosition = (player.position + cam_.ScreenToWorldPoint(Input.mousePosition)) / 2f;
 

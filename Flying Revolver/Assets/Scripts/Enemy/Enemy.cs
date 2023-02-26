@@ -5,8 +5,6 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    public static Enemy Instance;
-
     [Header("General Settings")]
     [SerializeField] Animator anim;
 
@@ -33,12 +31,6 @@ public class Enemy : MonoBehaviour
     bool callUpdateDestination = false;
     bool isDead = false;
 
-
-    private void Awake()
-    {
-        if (Instance != null && Instance != this) Destroy(this.gameObject);
-        Instance = this;
-    }
 
     void Start()
     {
@@ -133,7 +125,7 @@ public class Enemy : MonoBehaviour
 
         if (playerReference != null)
         {
-            agent.stoppingDistance = 7.5f;
+            agent.stoppingDistance = 8f;
             inPlayerRange = true;
 
             currentTarget = playerReference.transform;

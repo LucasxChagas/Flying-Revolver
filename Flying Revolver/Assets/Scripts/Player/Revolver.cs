@@ -12,7 +12,7 @@ public class Revolver : MonoBehaviour
     
     void Update()
     {
-        if (!GameManager.Instance.endGame)
+        if (!GameManager.Instance.endGame && !Player.isDead)
         {
             if (Input.GetMouseButton(0) && CanShot())
             {

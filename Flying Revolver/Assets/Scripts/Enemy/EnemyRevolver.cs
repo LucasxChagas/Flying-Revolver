@@ -7,14 +7,20 @@ public class EnemyRevolver : MonoBehaviour
     [SerializeField] Transform barrel;
     [SerializeField] float fireRate;
     [SerializeField] GameObject bullet;
+    Enemy enemy;
 
     float fireTimer;
+
+    private void Start()
+    {
+        enemy = this.GetComponentInParent<Enemy>();
+    }
 
     void Update()
     {
         if (!GameManager.Instance.endGame)
         {
-            if (CanShot() && Enemy.Instance.inPlayerRange)
+            if (CanShot() && enemy.inPlayerRange)
             {
                 fireTimer = Time.time + fireRate;
 
