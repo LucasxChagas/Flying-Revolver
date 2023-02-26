@@ -22,7 +22,7 @@ public class TaskManager : MonoBehaviour
     [Header("Kill Bandits Task")]
     [SerializeField] GameObject killBanditsTask;
     [SerializeField] TMP_Text[] killBanditsTexts; // 0 - QTD || 1 - Text
-    [SerializeField] int maxBandits = 5;
+    [SerializeField] int maxBandits = 3;
     int banditsKilled = 0;
 
     [Header("Report To Sheriff Task")]

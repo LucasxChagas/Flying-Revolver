@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public static Player Instance;
     [Header("Components")]
     [SerializeField] Animator anim;
     [SerializeField] Rigidbody2D rb;
@@ -13,6 +14,8 @@ public class Player : MonoBehaviour
 
     [Header("Player Settings")]
     public float movementSpeed = 6f;
+    public Color32 damageColor;
+    public Color32 normalColor;
 
     [Header("Others")]
     Vector3 mousePosition;
@@ -20,9 +23,10 @@ public class Player : MonoBehaviour
 
     public static bool isDead;
 
-    void Start()
+    private void Awake()
     {
-        Cursor.visible = false;
+        if(Instance != null && Instance != this) Destroy(this.gameObject);
+        Instance = this;
     }
 
     void Update()
@@ -76,5 +80,18 @@ public class Player : MonoBehaviour
             this.GetComponent<SpriteRenderer>().flipX = true;
 
         }
+    }
+
+    public void SufferDamage()
+    {
+        GameManager.Instance.HitPause();
+    }
+
+    public void DamageFeedback(bool isDamage)
+    {
+       if(isDamage)
+            GetComponent<SpriteRenderer>().color = damageColor;
+       else
+            GetComponent<SpriteRenderer>().color = normalColor;
     }
 }

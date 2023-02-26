@@ -11,6 +11,12 @@ public class GameManager : MonoBehaviour
 
     [HideInInspector] public bool endGame;
 
+    [Header("HitPause Settings")]
+    [SerializeField] [Range(0f, 2f)] float pauseDuration = 1f;
+    float pendingPauseDuration = 0f;
+    bool isPaused = false;
+
+
     private void Awake()
     {
         canvas.SetActive(false);
@@ -22,17 +28,45 @@ public class GameManager : MonoBehaviour
         }
         Instance = this;
 
-
     }
 
     void Start()
     {
         canvas.SetActive(true);
+        Cursor.visible = false;
+    }
+
+    void Update()
+    {
+        if (pendingPauseDuration > 0 && !isPaused)
+        {
+            StartCoroutine(StartsHitPause());
+        }
     }
 
     public void CallEndGame()
     {
         endGame = true;
         Debug.Log("Cabou o jogo");
+    }
+
+    public void HitPause()
+    {
+        pendingPauseDuration = pauseDuration;
+
+    }
+
+    IEnumerator StartsHitPause()
+    {
+        isPaused = true;
+        float originalTimeScale = Time.timeScale;
+        Player.Instance.DamageFeedback(true);
+        Time.timeScale = 0;
+        yield return new WaitForSecondsRealtime(pauseDuration);
+        CameraShake.Instance.ShakeCamera(8f, .3f);
+        Player.Instance.DamageFeedback(false);
+        Time.timeScale = originalTimeScale;
+        pendingPauseDuration = 0;
+        isPaused = false;
     }
 }
